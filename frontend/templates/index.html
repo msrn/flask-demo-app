@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+
+    <body>
+        <h1>{{appName}} site</h1>
+        <form method="post">
+            <p>Input item <input type = "text" name="item"/></p>
+            <input type="submit" value="submit"/>
+        </form>
+        <h2>List items:</h2>
+        <ol>
+        {%for item in items %}
+        
+            <li>{{item}}</li>
+        
+        {%endfor%}
+        </ol>
+
+
+    </body>
+
+</html>

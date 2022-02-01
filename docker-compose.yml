@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "1337:1337"
+  frontend:
+    build: ./frontend
+    ports:
+      - "81:81"
+    environment:
+      - BACKEND_SERVER=backend:1337
+    depends_on:
+      - backend
+    
