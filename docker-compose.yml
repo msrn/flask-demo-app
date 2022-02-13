@@ -1,11 +1,11 @@
 version: "3.9"
 services:
   backend:
-    build: ./backend
+    image: ghcr.io/msrn/flask-demo-app-backend:latest
     ports:
       - "1337:1337"
   frontend:
-    build: ./frontend
+    image: ghcr.io/msrn/flask-demo-app-frontend:latest
     ports:
       - "81:81"
     environment:
