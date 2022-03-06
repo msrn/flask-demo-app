@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: backend-pod
+  labels:
+    name: backend-pod
+    app: backend-pod
+spec:
+  containers:
+  - name: backend
+    image: ghcr.io/msrn/flask-demo-app-backend:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 1337
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  selector:
+    app: backend-pod
+  ports:
+    - port: 1337
+      targetPort: 1337
+  
+
