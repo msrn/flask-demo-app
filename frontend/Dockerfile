@@ -15,7 +15,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # By default use and expose port 81
-EXPOSE 81
+EXPOSE 8080
 
 #Expose env variable BACKEND_SERVER to our image
 ENV BACKEND_SERVER $BACKEND_SERVER

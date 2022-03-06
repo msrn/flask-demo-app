@@ -7,7 +7,7 @@ services:
   frontend:
     image: ghcr.io/msrn/flask-demo-app-frontend:latest
     ports:
-      - "81:81"
+      - "8080:8080"
     environment:
       - BACKEND_SERVER=backend:1337
     depends_on:
