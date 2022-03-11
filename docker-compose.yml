@@ -1,9 +1,12 @@
 version: "3.9"
+
 services:
   backend:
     image: ghcr.io/msrn/flask-demo-app-backend:latest
     ports:
       - "1337:1337"
+    volumes:
+      - ./test-mount:/app/data/
   frontend:
     image: ghcr.io/msrn/flask-demo-app-frontend:latest
     ports:
