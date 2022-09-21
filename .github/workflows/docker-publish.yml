@@ -59,7 +59,8 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
+      - name: echo
+        run: ${{ needs.tag-commit.outputs.new_tag }}
       # Extract metadata (tags, labels) for Docker
       # https://github.com/docker/metadata-action
       - name: Extract Docker metadata
