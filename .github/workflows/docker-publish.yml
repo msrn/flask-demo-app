@@ -56,7 +56,6 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-frontend
           tags: |
-            type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}},value=2.0.0
             type=semver,pattern={{major}}.{{minor}}
@@ -109,7 +108,6 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-backend
           tags: |
-            type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}},value=2.0.0
             type=semver,pattern={{major}}.{{minor}}
